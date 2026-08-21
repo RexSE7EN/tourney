@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@theme {
+  /* Semantic Color Palette (Red, Blue, Purple Theme) */
+  --color-primary: #3b82f6;       /* Vibrant Blue */
+  --color-primary-hover: #2563eb;
+  
+  --color-secondary: #8b5cf6;     /* Rich Purple */
+  
+  --color-accent: #ef4444;        /* Striking Red */
+  --color-accent-bg: rgba(239, 68, 68, 0.1);
+  --color-accent-border: rgba(239, 68, 68, 0.4);
+
+  --color-bg-base: #ffffff;
+  --color-bg-surface: #f8fafc;
+  --color-border: #e2e8f0;
+  
+  --color-text-main: #0f172a;
+  --color-text-muted: #64748b;
+
+  --shadow-custom: rgba(0, 0, 0, 0.08) 0 10px 15px -3px, rgba(0, 0, 0, 0.04) 0 4px 6px -2px;
+
+  --font-sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: ui-monospace, Consolas, monospace;
+}
+
+@layer base {
+  :root {
+    font: 18px/145% var(--font-sans);
+    letter-spacing: 0.18px;
+    color-scheme: light dark;
+    color: var(--color-text-main);
+    background: var(--color-bg-base);
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    @media (max-width: 1024px) {
+      font-size: 16px;
+    }
+  }
+
+  /* Dark Mode Overrides */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-primary: #60a5fa;       /* Brighter Blue for Dark Mode */
+      --color-primary-hover: #93c5fd;
+      
+      --color-secondary: #a78bfa;     /* Softer Purple */
+      
+      --color-accent: #f87171;        /* Brighter Red */
+      --color-accent-bg: rgba(248, 113, 113, 0.15);
+      --color-accent-border: rgba(248, 113, 113, 0.4);
+
+      --color-bg-base: #090d16;       /* Deep dark blue-tinted background */
+      --color-bg-surface: #111827;
+      --color-border: #1e293b;
+      
+      --color-text-main: #f8fafc;
+      --color-text-muted: #94a3b8;
+
+      --shadow-custom: rgba(0, 0, 0, 0.5) 0 10px 15px -3px, rgba(0, 0, 0, 0.3) 0 4px 6px -2px;
+    }
+  }
+
+  body {
+    margin: 0;
+  }
+}
+
+@layer components {
+  /* Empty For Now */
+}
