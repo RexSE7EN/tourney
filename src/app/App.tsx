@@ -1,4 +1,4 @@
-import './App.css'
+import NavBar from "@/components/NavBar"
 
 interface User {
   name: string
@@ -17,7 +17,8 @@ function Greeting({ name, age }: User) {
 export default function App() {
   return (
     <>
-      <div className="h-screen flex justify-center items-center">
+      <NavBar />
+      <div className="h-svh flex justify-center items-center">
         <h1 className="text-white font-extrabold">tourney &gt;&nbsp;</h1>
         <Greeting name="Stranger" />
         <p>This page is under construction.</p>
